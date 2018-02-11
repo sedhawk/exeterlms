@@ -1,6 +1,6 @@
 /***************************************************************************************************** 
  * Don Speer
- * Course: TODO: find the course name
+ * Course: FSWO101 Lesson 1
  * Date: February 9, 2018
  * Purpose: Introduction to Front End Foundations
 *****************************************************************************************************/
