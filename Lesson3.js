@@ -32,16 +32,16 @@ console.log("Your grade is: " + yourGrade);
 
 // PART 2:
 // Prints the words "Hello World" to the screen hovering your mouse over the page
-/*document.addEventListener("mouseover", myFunction);
+document.addEventListener("mouseover", myFunction);
 document.addEventListener("mouseout", mySecondFunction);
 
 function myFunction(){
-    document.getElementById("mouse").innerHTML += "Hello Mouse <br>";
+    document.getElementById("mouse").innerHTML = "Hello Mouse <br>";
 }
 
 function mySecondFunction(){
-    document.getElementById("mouse").innerHTML += "Good Bye Mouse <br>";
-}*/
+    document.getElementById("mouse").innerHTML = "Good Bye Mouse <br>";
+}
 
 // PART 3:
 // Create a web page that will take a user's input and print it to the screen
