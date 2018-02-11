@@ -36,11 +36,11 @@ console.log("Your grade is: " + yourGrade);
 document.addEventListener("mouseout", mySecondFunction);
 
 function myFunction(){
-    document.getElementById("mouse").innerHTML += "Hello World <br>";
+    document.getElementById("mouse").innerHTML += "Hello Mouse <br>";
 }
 
 function mySecondFunction(){
-    document.getElementById("mouse").innerHTML += "Good Bye <br>";
+    document.getElementById("mouse").innerHTML += "Good Bye Mouse <br>";
 }*/
 
 // PART 3:
