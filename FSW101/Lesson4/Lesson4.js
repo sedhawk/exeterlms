@@ -26,13 +26,16 @@ try {
 // Checks the input of a user's name for the proper format
 function checkName(checkName){
     checkName = document.getElementById("name").value;
+    validName = "The name " + checkName + " is valid";
+    invalidName = "The name you entered is invalid";
+
     let nameRegex = /^[A-Z][a-z]+ [A-Z][a-z]+/g
     try {
-        if (checkName.match(nameRegex)) alert("Valid name entered");
-        console.log(true);
+        if (checkName.match(nameRegex)){
+            document.getElementById("postName").innerHTML = validName;
+        }
     }
     catch {
-        alert("Name entered is invalid");
-        console.log(false);
+        document.getElementById("postName").innerHTML = invalidName;
     }
 }
