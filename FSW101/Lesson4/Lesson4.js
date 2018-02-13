@@ -20,7 +20,7 @@ try {
     if (newNumber < 5) throw true;
 } catch {
     console.log("Error: Invalid Number");
-}
+    }
 
 // PART 3
 // Checks the input of a user's name for the proper format
@@ -28,17 +28,11 @@ function checkName(checkName){
     checkName = document.getElementById("name").value;
     validName = "The name " + checkName + " is valid";
     invalidName = "The name you entered is invalid";
-
-    let nameRegex = /^[A-Z][a-z]+ [A-Z][a-z]+/g
-    document.addEventListener("click", checkFullName);
-    function checkFullName(){
-        try {
-            if (checkName.match(nameRegex)){
-                document.getElementById("postName").innerHTML = validName;
-            }
-        }
-        catch {
-            document.getElementById("postName").innerHTML = invalidName;
-        }
-}
+		
+    let nameRegex = /^[A-Z][a-z]+ [A-Z][a-z]+/g;
+    
+    if (checkName.match(nameRegex)) document.getElementById("postName").innerHTML = validName;
+  	else document.getElementById("postName").innerHTML = invalidName;
+        
+		
 }

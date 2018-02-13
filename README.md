@@ -1,8 +1,11 @@
 # exeterlms
 coder camps spring '18
 
-First Project is here:
+First Hands On Project is here:
 https://jsfiddle.net/khLcb648/result/
 
-Lesson 3 Project here:
-https://jsfiddle.net/sedhawk/p2g4tmv0/result/
+Lesson 3 Hands On Project here:
+https://jsfiddle.net/sedhawk/p2g4tmv0/6/result/
+
+Lesson 4 Hands On Project here:
+https://jsfiddle.net/sedhawk/7bcqmh74/14/result/
