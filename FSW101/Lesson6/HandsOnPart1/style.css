@@ -1,0 +1,27 @@
+body{
+    background-color: #262326;
+    background-size: contain;
+}
+
+
+header {
+    background-color: transparent;
+    color: #262326;
+    text-align: center;
+    font-size: 50px;
+    font-family: Georgia;
+    font-weight:900;
+    text-shadow: 2px 2px #c2736b;
+}
+
+h1{
+    text-align: center;
+    font-family: Georgia;
+    color: #c2736b;
+}
+
+p{
+    text-align: center;
+    font-family: Georgia;
+
+}
