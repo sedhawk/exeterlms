@@ -25,3 +25,16 @@ p{
     font-family: Georgia;
 
 }
+
+div {
+	background: blue;
+	float: left;
+	margin: 1%;
+	width: 100px;
+	height: 100px;
+}
+
+section {
+  margin: -1%;
+  padding: 20px;
+}
