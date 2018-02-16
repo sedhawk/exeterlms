@@ -1,0 +1,38 @@
+.row {
+    border: 1px solid black;
+    height: 200px;
+  }
+  
+  .col-sm-6 {
+    border: 1px solid black;
+    height: 200px;
+  }
+  
+  .col-sm-4 {
+    border: 1px solid black;
+    height: 200px;
+  }
+  
+  .col-sm-8 {
+    border: 1px solid black;
+    height: 200px;
+  }
+  
+  .col-sm-3 {
+    border: 1px solid black;
+    height: 200px;
+  }
+  
+  .col-sm-9 {
+    border: 1px solid black;
+    height: 200px;
+  }
+
+  .col-md-4 {
+    border: 1px solid black;
+    height: 200px;
+  }
+
+  .table {
+    width: 400px;
+  }
