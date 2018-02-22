@@ -41,4 +41,8 @@
   }
   .jumbotron {
     width: 500px;
-  } 
+  }
+  .label, label.inline {
+    display: inline-block;
+    width: 100px;
+}
