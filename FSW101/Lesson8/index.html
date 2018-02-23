@@ -7,48 +7,192 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-
+<!-- Jumbotron -->
 <body>
+    <div class="container" "center">
+        <div class="jumbotron" "center-block">
+            <h1>Bootstrap</h1>
+            <p>Hands On Project</p>
+        </div>
+    </div>
     <div class="container">
-            <div class="jumbotron">
-                <h1>Bootstrap</h1>
-                <p>Hands On Project</p>
+        <!--Row with two equal columns-->
+        <div class="row">
+            <div class="col-sm-6">
+                <!--Left Column-->
+                    <!-- Create Input Fields -->
+                    <form class="form-inline">
+                        <div class=" form-group">
+                            <label for="First Name ">First Name</label>
+                            <span class= "label">
+                                <input type="name " class="form-control " id="FName " placeholder="First Name "/>
+                            </span>
+                        </div>
+                        <div class="form-inline">
+                            <label for="Last Name ">Last Name</label>
+                            <span class= "label">
+                                <input type="name " class="form-control " id="LName " placeholder="Last Name ">
+                            </span>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="Password ">Password.</label>
+                            <span class= "label">
+                                <input type="password " class="form-control " id="Password " placeholder="Password ">
+                            </span>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group" >
+                            <label for="Email ">Email..........</label>
+                            <input type="email " class="form-control " id="Email " placeholder="Email ">
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="Checkbox">Preferred Contact Time</label>
+                            <input type="checkbox"> AM</label>
+                            <input type="checkbox"> PM</label>
+                        </div>
+                    </form>
+                    <button type="submit " class="btn btn-primary">Login</button>
+                </div>
+            <div class="col-sm-6">
+                <!--Right Column-->
+                <!-- table with hoverable rows and border-->
+                <div>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="active">
+                                <th>Col 1</th>
+                                <th>Col 2</th>
+                                <th>Col 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
             </div>
+        </div>
     </div>
 
-    <form class="form-inline">
-        <div class=" form-group ">
-            <label for="First Name ">Name</label>
-            <span class= "label">
-                <input type="name " class="form-control " id="FName " placeholder="First Name "/>
-            </span>
+    <hr>
+
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><span class="glyphicon glyphicon-user"></span>Hello User</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+        
+            </div>
         </div>
-        <div class=" form-group ">
-            <label for="Last Name "></label>
-            <span class= "label">
-                <input type="name " class="form-control " id="LName " placeholder="Last Name ">
-            </span>
+    <hr>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default" "navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Hands On Project Navigation</a>
         </div>
-    </form>
-    <form class="form-inline">
-        <div class="form-group">
-            <label for="Password ">Password  </label>
-            <span class= "label">
-                <input type="password " class="form-control " id="Password " placeholder="Password ">
-            </span>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <!-- drop-down menu -->
+                <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Inbox</a>
+                            </li>
+                            <li>
+                                <a href="#">Drafts</a>
+                            </li>
+                            <li>
+                                <a href="#">Sent Items</a>
+                            </li>
+                            <li>
+                                <a href="#">Trash</a>
+                            </li>
+                        </ul>
+                    </li>
+            </ul>
+            <!-- Search box for the nav bar that includes a glyphicon -->
+            <div class="pull-right">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Email ">Email   </label>
-            <input type="email " class="form-control " id="Email " placeholder="Email ">
-        </div>
-    </form>
-    <form class="form-inline">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> AM</label>
-                <input type="checkbox"> PM</label>
-        </div>
-    </form>
-    <button type="submit " class="btn btn-primary ">Login</button>
-</body>
-    </html>
+    </nav>
+    <!-- Buttons -->
+    <div>
+            <button type="button" class="btn btn-success">Primary</button>
+
+            <button type="button" class="btn btn-warning">Warning</button>
+    
+            <button type="button" class="btn btn-danger">Danger</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
