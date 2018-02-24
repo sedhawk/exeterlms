@@ -4,6 +4,6 @@ $(document).ready(function() {
     });
     $('.toggle').click(function(e){
       e.preventDefault();
-    $("#driver1").attr('src', "../../../images/Einstein.jpeg");
+    $("#driver1").attr('src', "../../../images/albert-einstein.jpg");
   });
 });
