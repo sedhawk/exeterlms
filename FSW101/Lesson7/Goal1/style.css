@@ -12,6 +12,9 @@ body {
 
 header {
     height: 75px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    text-align: center;
 }
 
 main {
