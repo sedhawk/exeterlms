@@ -1,0 +1,59 @@
+@media (min-width: 768px)
+.col-sm-9 {
+    width: 75%;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.home-two #home-banner {
+    background-image: src="../../images/Speer_Donald-2.jpg";
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.home-two .banner-info h1 {
+    font-size: 72px;
+    margin-bottom: 0;
+    font-family: 'Sacramento', cursive;
+}
+
+.banner-info h2 {
+    font-size: 128px;
+    margin-top: 0;
+    line-height: 92px;
+    margin-left: -8px;
+}
+
+.banner-info h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 26px;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.banner-content, #home-banner {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.home-two .home-social {
+    position: absolute;
+    top: 40px;
+}
