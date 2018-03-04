@@ -583,13 +583,6 @@ a:hover {
   z-index: 9999;
 }
 
-.stickyfooter {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
 .round.pic {
   border-radius: 50%;
 }
@@ -1389,11 +1382,18 @@ img.mfp-img {
 
 /* Footer Section */
 
+.stickyfooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
 #footer {
   color: #fff;
   background-color: #87c05e;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 2px;
 }
 
 #footer a {
@@ -1578,6 +1578,6 @@ h3.widget_title {
   color: #87c05e;
 }
 
-#example ul a{
-  font-size: 12px;
+#example ol li a{
+  font-size: 20px;
 }
