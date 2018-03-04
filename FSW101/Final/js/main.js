@@ -57,6 +57,36 @@ $(document).ready(function () {
        navbar.classList.remove("sticky");
      }
    };
+
+   $(".list-inline-f").hover(function(){
+        $(this).css("font-size", "35px");
+        }, function(){
+        $(this).css("font-size", "15px");
+        });
+
+    $(".list-inline-t").hover(function(){
+        $(this).css("font-size", "35px");
+        }, function(){
+        $(this).css("font-size", "15px");
+        });
+
+    $(".list-inline-gp").hover(function(){
+        $(this).css("font-size", "35px");
+        }, function(){
+        $(this).css("font-size", "15px");
+        });
+
+    $(".list-inline-l").hover(function(){
+        $(this).css("font-size", "35px");
+        }, function(){
+        $(this).css("font-size", "15px");
+        });
+    
+    $(".list-inline-gh").hover(function(){
+        $(this).css("font-size", "35px");
+        }, function(){
+        $(this).css("font-size", "15px");
+        });
 });
 
 

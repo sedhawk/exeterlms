@@ -79,27 +79,53 @@
 }
 
 .banner-info h3 {
-    font-size: 16px;
+    font-size: 25px;
     text-transform: uppercase;
     letter-spacing: 26px;
 }
 
 .home-two .home-social {
   position: absolute;
-  top: 40px;
+  top: 15px;
 }
 
 .menu-two .home-social li+li {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .menu-two .home-social li a {
   color: #2d3038;
-  font-size: 6px;
+  font-size: 15px;
 }
 
 .menu-two .home-social li a:hover {
   color: #00aeef;
+}
+
+.list-inline{
+  font-size: 15px;
+}
+
+.list-inline-f{
+  font-size: inherit;
+}
+
+.list-inline-t{
+  font-size: inherit;
+}
+
+.list-inline-gp{
+  font-size: inherit;
+}
+.list-inline-l{
+  font-size: inherit;
+}
+.list-inline-gh{
+  font-size: inherit;
+}
+
+.toprow{
+  margin-left: 33%;
 }
 
 /* ==========================================================================
