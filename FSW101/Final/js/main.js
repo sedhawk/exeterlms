@@ -8,6 +8,7 @@
 # onePageNav
 # Sticky Nav
 # Mobile Toggle Control
+# Ajax gitHubRequest
 
 ==================================================
 */
@@ -188,3 +189,19 @@ function Scroll() {
 
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
+
+//Create a dynamic list of your GitHub repositories using an AJAX request
+function loadDoc(url, callback) {
+    const gitHubRequest = new XMLHttpRequest();
+    gitHubRequest.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        callback(this);
+      }
+    };
+    gitHubRequest.open("GET", url, true);
+    gitHubRequest.send();
+  }
+  
+  function loadRepoCallback(gitHubRequest) {
+    document.getElementById("example").innerHTML = gitHubRequest.responseText;
+  }
