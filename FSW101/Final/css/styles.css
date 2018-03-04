@@ -391,3 +391,82 @@
 .about-section address span {
   font-weight: 700;
 }
+
+/* Skill Section */
+ 
+.skill-section .rating-bar {
+  width: 360px;
+}
+
+.progress-content {
+  overflow: hidden;
+}
+
+.bar-left {
+  float: left;
+}
+
+.bar-right {
+  float: right;
+}
+
+.rating-bar label,
+.rating-bar span {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.skill-progress {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.progress {
+  height: 8px;
+  margin-bottom: 22px;
+  background-color: #ebebeb;
+  border-radius: 4px;
+  box-shadow: none;
+  width: 100%;
+  position: relative;
+}
+
+.progress-bar {
+ background-color: #f4bf00;
+ box-shadow: none;
+-webkit-transition: width 2s ease-in-out;
+-moz-transition: width 2s ease-in-out;
+-ms-transition: width 2s ease-in-out;
+-o-transition: width 2s ease-in-out;
+transition:  width 2s ease-in-out;
+border-radius: 4px;   
+}
+
+.progress-bar.bar1 {
+  background-color: #b90162;
+}
+
+.progress-bar.bar2 {
+  background-color: #3c70b4;
+}
+
+.progress-bar.bar3 {
+  background-color: #f26522;
+}
+
+.progress-bar.bar4 {
+  background-color: #ed1c24;
+}
+
+.progress-bar.bar5 {
+  background-color: #87c05e;
+}
+
+.text-info {
+  font-size: 14px;
+  line-height: 24px;
+  color: #2d3038;
+  margin-bottom: 50px;
+}
+
+.text-info h4 {}
