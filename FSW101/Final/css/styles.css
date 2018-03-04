@@ -232,7 +232,7 @@ a:hover {
   height: 9.1%;
   position: relative;
   margin-left: 10px;
-  z-index: 20;    
+  z-index: 9999;    
 }
 
 #navigation.menu-one .navbar-nav {
@@ -297,42 +297,52 @@ a:hover {
 
 #navigation .navbar-nav>li:nth-child(1) {
   background-color: #f4bf00;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(2) {
   background-color: #f7941d;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(3) {
   background-color: #f26522;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(4) {
   background-color: #ed1c24;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(5) {
   background-color: #e10337;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(6) {
   background-color: #b90162;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(7) {
   background-color: #873e95;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(8) {
   background-color: #3c70b4;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:nth-child(9) {
   background-color: #05ac80;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li:last-child {
   background-color: #87c05e;
+  z-index: 999;
 }
 
 #navigation .navbar-nav>li .social {
