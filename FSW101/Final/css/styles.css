@@ -309,3 +309,7 @@
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.round.pic {
+  border-radius: 50%;
+}
