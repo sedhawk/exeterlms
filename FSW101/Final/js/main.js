@@ -88,6 +88,10 @@ $(document).ready(function () {
         }, function(){
         $(this).css("font-size", "15px");
         });
+
+    $("#repolink").click( function() {
+        loadDoc('https://api.github.com/users/sedhawk/repos', loadRepoCallback);
+        });
 });
 
 
@@ -207,6 +211,6 @@ function loadDoc(url, callback) {
     for(var repoIndex in gitHubRequest.response) {
         var name = gitHubRequest.response[repoIndex].name;
         var html_url = gitHubRequest.response[repoIndex].html_url;
-        document.getElementById("example").innerHTML = '<a href="'+ html_url + '">' + name + '</a>';
+        document.getElementById("example").innerHTML += '<a href="'+ html_url + '">' + name + '</a>';
       }
   }
