@@ -1340,6 +1340,16 @@ img.mfp-img {
   color: #87c05e;
 }
 
+.gitrepo h1 {
+  font-weight: normal;
+  margin-top: 45px;
+  font-family: 'Sacramento', cursive;
+}
+
+.gitrepo .icons {
+  color: #87c05e;
+}
+
 .profile-section .btn.btn-primary {
   margin-top: 65px;
 }
@@ -1521,4 +1531,8 @@ h3.widget_title {
 
 .post-action h3 a:hover {
   color: #87c05e;
+}
+
+#example{
+  
 }
