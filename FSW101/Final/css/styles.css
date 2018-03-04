@@ -180,8 +180,9 @@ a:hover {
 }
 
 .home-two .home-social {
-  position: absolute;
+  position: relative;
   top: 15px;
+  overflow: auto;
 }
 
 .menu-two .home-social li+li {
@@ -578,6 +579,13 @@ a:hover {
 .sticky {
   position: fixed;
   top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.stickyfooter {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   z-index: 9999;
 }
@@ -1384,7 +1392,7 @@ img.mfp-img {
 #footer {
   color: #fff;
   background-color: #87c05e;
-  padding-top: 22px;
+  padding-top: 30px;
   padding-bottom: 10px;
 }
 
@@ -1394,6 +1402,7 @@ img.mfp-img {
 
 #footer a:hover {
   color: #6bff00;
+  position: fixed;
 }
 
 /* Main Blog */
@@ -1569,6 +1578,6 @@ h3.widget_title {
   color: #87c05e;
 }
 
-#example{
-  
+#example ul a{
+  font-size: 12px;
 }
