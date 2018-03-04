@@ -214,5 +214,5 @@ function loadDoc(url, callback) {
         var html_url = gitHubRequest.response[repoIndex].html_url;
         str += '<li><a href="'+ html_url + '">' + name + '</a></li>';
       }
-    document.getElementById("example").innerHTML = str += '<li><a href="'+ html_url + '">' + name + '</a></li></ol>';
+    document.getElementById("example").innerHTML = str + '<li><a href="'+ html_url + '">' + name + '</a></li></ol>';
   }

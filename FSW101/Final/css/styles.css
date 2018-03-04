@@ -50,8 +50,8 @@
   }
 
   .containerfooter {
-    height: 17px;
-    position: absolute;
+    height: 30px;
+    position: fixed;
   }
 
   body {
@@ -578,7 +578,8 @@ a:hover {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  z-index: 9999;
 }
 
 .round.pic {
