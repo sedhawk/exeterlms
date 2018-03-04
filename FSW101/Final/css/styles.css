@@ -49,7 +49,12 @@
     height: 300px;
   }
   body {
+    font-family: 'Montserrat', sans-serif;
     background-color: lightskyblue;
+    font-weight:normal;
+    overflow-x:hidden;
+    -webkit-font-smoothing: antialiased;
+    color: #2d3038;
 } 
 
   #corners {
@@ -65,6 +70,82 @@
     font-weight: 700;
     color: #2d3038;
   }
+
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a, a:hover, a:active,
+ a:focus, button:focus, .btn:focus,
+ .form-control:focus {
+     outline: none !important;
+     text-decoration: none !important;
+     box-shadow: none !important;
+ }
+
+ .section-padding {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.section-title {
+  margin-bottom: 60px;
+}
+
+.section-title h1 {
+  font-size: 42px;
+}
+
+.home-two .section-title h1 {
+  font-size: 50px;
+  margin-top: 0;
+}
+
+.section-content {
+  max-width: 750px;
+}
+
+.btn.btn-primary {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #3c70b4;
+  border: 1px solid #3c70b4;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn.btn-primary:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.btn.btn-primary:hover:before {
+  left: 0;
+}
+
+.btn.btn-primary:hover {
+  color: #3c70b4;
+}
+
+a{
+  color: #2d3038;
+}
+
+a:hover {
+  color: #00aeef;
+}
 
   .banner-info h1 {
     font-size: 36px;
@@ -126,6 +207,7 @@
 
 .toprow{
   margin-left: 33%;
+  color: #2d3038;
 }
 
 /* ==========================================================================
@@ -187,9 +269,9 @@
 }
 
 .nav>li>a:focus, 
-.nav>li>a:hover {
+/*.nav>li>a:hover {
   background-color: transparent;
-}
+}*/
 
 #navigation.menu-one .navbar:before {
   left: 15px;
@@ -339,6 +421,133 @@
   margin: 0 auto;
 }
 
+ /*Dropdown CSS*/
+ 
+ ul.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding:7px 0;
+  margin: 0;
+  min-width: 160px; 
+  display: none;
+  z-index: 999;
+  background-color: #f4bf00;
+}
+  
+.nav.navbar-nav > li:hover > ul.sub-menu {
+  display: block;
+  -webkit-animation: fadeInUp 500ms;
+  -moz-animation: fadeInUp 500ms;
+  -ms-animation: fadeInUp 500ms;
+  -o-animation: fadeInUp 500ms;
+  animation: fadeInUp 500ms;
+}
+
+#navigation.menu-two .navbar-nav .sub-menu li a {
+    padding: 5px 18px;
+    color: #fff;
+    font-size: 13px;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*End Drpdown Menu CSS*/
+
+/* Navbar Toggle */
+ 
+.navbar-toggle {
+  border-color: #fff;
+  /*background-color: transparent;*/
+  padding: 12px 10px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.home-banner-one {
+  background-color: #e7e7e7;
+}
+
+.home-banner-one .banner-content {
+  background-image: url(../images/bg/banner.jpg);
+  background-color: #e7e7e7;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-two #home-banner {
+  background-image: url(../images/bg/2.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.banner-info h1 {
+  font-size: 36px;
+  font-family: 'Pacifico', cursive;
+}
+
+.banner-info h2 {
+  font-size: 108px;
+  margin-top: 0;
+  line-height: 92px;
+  margin-left: -8px;
+}
+
+.banner-info h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 26px;
+}
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -394,8 +603,49 @@
 	padding: 20px;
 }
 
+/* Home Two  */
+ 
+.home-two .banner-info h1 {
+  font-size: 72px;
+  margin-bottom: 0;
+  font-family: 'Sacramento', cursive;
+}
+
+.banner-content, #home-banner {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.banner-content .banner-info {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  margin-top: -100px
+}
+
+.home-two .home-social {
+  position: absolute;
+  top: 40px;
+}
+
+.menu-two .home-social li+li {
+  margin-left: 15px;
+}
+
+.menu-two .home-social li a {
+  color: #2d3038;
+  font-size: 16px;
+}
+
+.menu-two .home-social li a:hover {
+  color: #00aeef;
+}
+
 /* About Section */
  
+
 .about-section .section-title {
   margin-bottom: 45px;
 }
@@ -504,7 +754,7 @@ border-radius: 4px;
   margin-bottom: 50px;
 }
 
-/* Exprience Section */
+/* Experience Section */
  
 .exprience-section .exprience {
   overflow: hidden;
@@ -550,6 +800,31 @@ border-radius: 4px;
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+ /*Magnific-popup overwrite CSS*/
+ 
+ .mfp-figure {
+  background-color: #fff;
+}
+
+img.mfp-img {
+  padding:12px;
+}
+
+.mfp-image-holder .mfp-close {
+  top:-35px;
+}
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor:pointer;
+}
+
+.mfp-counter {
+  right: 50%;
+  color: #fff;
+  top: 50px;
+  margin-right: -20px;
 }
 
 /* Contact Section */
