@@ -198,10 +198,15 @@ function loadDoc(url, callback) {
         callback(this);
       }
     };
+    gitHubRequest.responseType = 'json';
     gitHubRequest.open("GET", url, true);
     gitHubRequest.send();
   }
   
   function loadRepoCallback(gitHubRequest) {
-    document.getElementById("example").innerHTML = gitHubRequest.responseText;
+    for(var repoIndex in gitHubRequest.response) {
+        var name = gitHubRequest.response[repoIndex].name;
+        var html_url = gitHubRequest.response[repoIndex].html_url;
+        document.getElementById("example").innerHTML = '<a href="'+ html_url + '">' + name + '</a>';
+      }
   }
