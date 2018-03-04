@@ -33,43 +33,32 @@ $(function(){
         navMain.collapse('hide');
     });
 });     
-          
-// -------------------------------------------------------------
-// Counter
-// -------------------------------------------------------------
 
-/*(function () {
-
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    
-    });
-
-}());
-*/
 // -------------------------------------------------------------
 // Progress Bar
 // -------------------------------------------------------------
 
 $(document).ready(function () {
 
-   /* $('.progress-content').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {*/
-            $.each($('div.progress-bar'),function(){
-                $(this).css('width', $(this).attr('aria-valuenow')+'%');
-            });
-            //$(this).unbind('inview');
-        //}
+    $.each($('div.progress-bar'),function(){
+        $(this).css('width', $(this).attr('aria-valuenow')+'%');
     });
-/*    $('.rating-bar').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $.each($('div.progress-bar'),function(){
-                $(this).css('width', $(this).attr('aria-valuenow')+'%');
-            });
-            $(this).unbind('inview');
-        }
-    });*/
+    
+    // Get the navbar
+   var navbar = document.getElementById("navigation");
+
+   // Get the offset position of the navbar
+   var sticky = navbar.offsetTop;
+
+   window.onscroll = function() {
+     if (window.pageYOffset >= sticky) {
+       navbar.classList.add("sticky")
+     } else {
+       navbar.classList.remove("sticky");
+     }
+   };
+});
+
 
 
 // -------------------------------------------------------------
@@ -121,7 +110,7 @@ $('#mainmenu li a').click(function() {
     $('html, body').animate({scrollTop: $(this.hash).offset().top -1}, 1000);
     return false;
 });
-
+/*
 // User define function
 function Scroll() {
     var contentTop      =   [];
@@ -141,7 +130,7 @@ function Scroll() {
         }
     })
 
-};
+};*/
   
 // -------------------------------------------------------------
 //  Sticky Nav
@@ -169,18 +158,3 @@ function Scroll() {
 
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var navigation = document.getElementsByClassName("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
