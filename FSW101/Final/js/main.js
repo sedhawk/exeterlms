@@ -208,9 +208,10 @@ function loadDoc(url, callback) {
   }
   
   function loadRepoCallback(gitHubRequest) {
+    var str = '<ol>';
     for(var repoIndex in gitHubRequest.response) {
         var name = gitHubRequest.response[repoIndex].name;
         var html_url = gitHubRequest.response[repoIndex].html_url;
-        document.getElementById("example").innerHTML += '<ul><li><a href="'+ html_url + '">' + name + '</a></li></ul>';
+        document.getElementById("example").innerHTML = str + '<li><a href="'+ html_url + '">' + name + '</a></li></ol>';
       }
   }

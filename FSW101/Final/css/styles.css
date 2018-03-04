@@ -48,6 +48,12 @@
   .container {
     height: 300px;
   }
+
+  .containerfooter {
+    height: 20px;
+    position: fixed;
+  }
+
   body {
     font-family: 'Montserrat', sans-serif;
     background-color: lightskyblue;
