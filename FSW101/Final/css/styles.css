@@ -10,27 +10,27 @@
   }
   
   .col-sm-4 {
-    border: 1px solid black;
+    
     height: 200px;
   }
   
   .col-sm-8 {
-    border: 1px solid black;
+    
     height: 200px;
   }
   
   .col-sm-3 {
-    border: 1px solid black;
+    
     height: 200px;
   }
   
   .col-sm-9 {
-    border: 1px solid black;
+    
     height: 200px;
   }
 
   .col-md-4 {
-    border: 1px solid black;
+    
     height: 200px;
   }
 
@@ -339,7 +339,7 @@
 }
 .stamp:after {
 	content: '';
-	position: absolute;
+  position: absolute;
 	/*We can shrink the pseudo element here to hide the shadow edges*/
 	left: 5px; top: 5px; right: 5px; bottom: 5px;
 	/*Shadow - doesn't look good because of the stamp cutout. We can still move this into another pseudo element behind the .stamp main element*/
@@ -357,4 +357,37 @@
 	opacity: 0.75;
 	line-height: 100%;
 	padding: 20px;
+}
+
+/* About Section */
+ 
+.about-section .section-title {
+  margin-bottom: 45px;
+}
+
+.about-section .section-title h4 {
+  margin-top: 0;
+  line-height: 0;
+} 
+
+.about-info {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.about-info .signature h1 {
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: 'Sacramento', cursive;    
+}
+
+.about-section address {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.about-section address span {
+  font-weight: 700;
 }
