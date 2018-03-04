@@ -85,6 +85,14 @@ a, a:hover, a:active,
      box-shadow: none !important;
  }
 
+ a, a:hover, a:active,
+ a:focus, buttongit:focus, .btn:focus,
+ .form-control:focus {
+     outline: none !important;
+     text-decoration: none !important;
+     box-shadow: none !important;
+ }
+
  .section-padding {
   padding-top: 80px;
   padding-bottom: 100px;
@@ -1393,6 +1401,17 @@ img.mfp-img {
   position: relative;
 }
 .widget_search button[type=submit] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  border-radius: 0;
+  background-color:#2d3038;
+  color: #fff;
+}
+
+.widget_search buttongit[type=submit] {
   position: absolute;
   right: 0;
   top: 0;
