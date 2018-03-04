@@ -50,8 +50,8 @@
   }
 
   .containerfooter {
-    height: 20px;
-    position: fixed;
+    height: 17px;
+    position: absolute;
   }
 
   body {
