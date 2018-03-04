@@ -121,7 +121,7 @@ $('#mainmenu li a').click(function() {
     $('html, body').animate({scrollTop: $(this.hash).offset().top -1}, 1000);
     return false;
 });
-/*
+
 // User define function
 function Scroll() {
     var contentTop      =   [];
@@ -142,7 +142,7 @@ function Scroll() {
     })
 
 };
- */   
+  
 // -------------------------------------------------------------
 //  Sticky Nav
 // -------------------------------------------------------------
