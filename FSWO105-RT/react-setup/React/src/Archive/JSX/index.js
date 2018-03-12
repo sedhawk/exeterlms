@@ -248,7 +248,7 @@ let makeBody = (props) => {
 let makeSong = ({header, author}) => (
     <div>{header}{author}</div>
 );
-ReactDOM.render(majorGeneral, document.getElementById('root'));
+ReactDOM.render({majorGeneral}, document.getElementById('root'));
 /*
 QUICK NOTES:  (for proj 3)
 class MyComponent extends React.Component {
