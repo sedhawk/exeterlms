@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     let{userprofile} = this.props;
     let repos = this.props.repos.map((repo, i) => {
-      return <li key={i}>{repo.name}></li>
+      return <ul key={i}> {repo.name}</ul>
     })
     return (
       <div className="App">
