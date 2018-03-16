@@ -1,48 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import * as ReactRedux from 'react-redux'
-import * as Redux from 'redux';
-const { Provider } = ReactRedux;
+import React from "react";
+import ReactDOM from "react-dom";
+import { tailsSelector, headsSelector} from "./selectors";
 
-// The application state is just a string that is either 'not started',
-// 'started', or 'completed'
-const reducer = (state = 'not started', action) => {
-    switch(action.type) {
-      case 'STARTED':
-        return 'started';
-      case 'COMPLETED':
-        return 'completed';
+const Results = (props) => (
+  <div>
+      <p>Heads: {props.heads}</p>
+      <p>Tails: {props.tails}</p>
+  </div>
+)
+
+const mapStateToProps = state => ({
+  heads: headsSelector(state),
+  tails: tailsSelector(state)
+})
+
+export default connect(mapStateToProps, null)(Results);
+
+class Balance extends React.Component {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.balance !== this.props.balance) {
+      this.setState({
+        balance: nextProps.balance
+      });
+      console.log("Changed");
     }
-    return state;
+  }
+
+  render() {
+    return <h3>Account Balance: ${this.props.balance}</h3>;
+  }
 }
-
-const store = Redux.createStore(reducer);
-
-// This component displays the current status and provides a button to
-// start an async process that will dispatch back to Redux
-let StatusDisplay = (props) => {
-    return (
-      <div>
-        <p>{props.status}</p>
-        <button onClick={waitTwoSecondsThenDispatch}>Start dispatch</button>
-      </div>
-    );
-};
-
-// This is our asynchronous process that dispatches immediately,
-// and then again when complete
-const waitTwoSecondsThenDispatch = () => {
-  store.dispatch({ type: 'STARTED' });
-  setTimeout(() => store.dispatch({ type: 'COMPLETED' }), 2000);
-}
-
-const mapStateToProps = state => ({ status: state });
-
-StatusDisplay = ReactRedux.connect(mapStateToProps)(StatusDisplay);
-
-ReactDOM.render(
-  <Provider store={store}>
-    <StatusDisplay />
-  </Provider>,
-  document.getElementById('root')
-);
