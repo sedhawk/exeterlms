@@ -45,6 +45,7 @@ class App extends Component {
         <header className="App-header">
           <img src={userprofile.avatar_url} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to my git repo retriever</h1>
+          <h3 className="App-sub-title">Type in your git user name in the input field</h3>
         </header>
         <h1>{this.props.username}</h1>
         <input type="text" 
