@@ -1,0 +1,56 @@
+--P1E1
+--Query all columns for customers with the first name of "Jennifer".
+
+SELECT * FROM customers
+WHERE FirstName = 'Jennifer';
+
+--P1E2
+--Query the track Name and track Composer that has an album ID greater than 250 and less than 340.
+
+SELECT Name, Composer FROM tracks
+WHERE AlbumId > 250 AND AlbumId < 340;
+
+--P1E3
+--Query the first and last name, phone number, fax number and email of customers who live in Brazil or in the USA.
+--(Added country column for proof)
+
+SELECT FirstName, LastName, Phone, Fax, Email, Country FROM customers
+WHERE Country = 'Brazil' OR Country = 'USA';
+
+--P2E1
+--Query all columns of the albums with a title that begins with "a".
+
+SELECT * FROM albums
+WHERE Title LIKE 'a%';
+
+--P2E2
+--Query all columns of the invoice items that have an InvoiceId of 2, 4, 6, 7, 9, 10.
+
+SELECT * FROM invoice_items
+WHERE InvoiceId IN (2, 4, 6, 7, 9, 10);
+
+--P2E3
+--Query all columns of playlists that do not have a name of "Music" and "Movies".
+
+SELECT * FROM playlists
+WHERE Name NOT LIKE '%Music%' AND Name NOT LIKE '%Movies%';
+
+--P2E4
+--Query the Name and Composer of tracks that are .99 cents, less than 8,000,000 Bytes and begin with a or c.
+
+SELECT Name, Composer FROM tracks
+WHERE UnitPrice = .99 AND Bytes < 8000000
+AND (Name LIKE 'a%' OR Name LIKE 'c%') 
+AND (Composer LIKE 'a%' OR Composer LIKE 'c%');
+
+/*P3E1
+You were just hired at a company as a data analyst and your company needs some information from the database. 
+They would like to see all tracks that have a UnitPrice over .99 cents. However, they only want to see the 
+Name and any Id that is attached to that track. Once you have finished that,
+they would like to see the same information of the invoice items.*/
+
+SELECT Name, TrackId FROM tracks
+WHERE UnitPrice > .99 AND
+TrackId IN (SELECT TrackId FROM invoice_items);
+
+
