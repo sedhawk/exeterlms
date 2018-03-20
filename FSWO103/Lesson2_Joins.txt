@@ -1,0 +1,51 @@
+--P1E1
+--Write a query to find the first and last name, customer ID 
+--and invoice ID for customers who have purchased an item.
+
+SELECT FirstName, LastName, CustomerId, InvoiceId 
+FROM customers
+JOIN invoices USING (CustomerId);
+
+--P1E2
+--Write a query that finds all playlists with tracks that 
+--have a trackId less than 5 and Bytes less than 6,000,000.
+
+SELECT * FROM playlists
+JOIN playlist_track USING (PlaylistId)
+JOIN tracks USING (TrackId)
+WHERE tracks.TrackId < 5 AND tracks.Bytes < 6000000;
+
+--P2E1
+--Write a query that lists out all information of every track 
+--along with the Name of the Genre for each track, even if a genre 
+--doesn't exist for that track.
+
+SELECT genres.Name AS GenreName,* FROM tracks
+LEFT OUTER JOIN genres USING(GenreId);
+
+--P2E2
+--Write a query that lists out the title of albums and the name 
+--of the artists who wrote those albums. We only want to see the 
+--albums that were written by artists that start with a vowel.
+
+SELECT Title, artists.Name AS ArtistName FROM albums
+JOIN artists USING(ArtistId) 
+WHERE albums.Title LIKE 'a%' 
+OR albums.Title LIKE 'e%'
+OR albums.Title LIKE 'i%'
+OR albums.Title LIKE 'o%'
+OR albums.Title LIKE 'u%'
+
+--Scenario
+--You have just been hired as a Data Analyst for a company that sells 
+--music to customers. They would like a list of playlists and the tracks 
+--that live inside each playlist. They want to see the Name of the 
+--playlist, Name of the tracks in the playlist, the Composer for each 
+--track and the UnitPrice. They also want to see all data, even if 
+--it is Null. They would like to see it in reverse alphebetical order 
+--of the Composers.
+
+SELECT playlists.Name AS PlaylistName,tracks.Name AS TrackName, Composer, UnitPrice FROM playlists
+LEFT OUTER JOIN playlist_track USING (PlaylistId)
+LEFT OUTER JOIN tracks USING (TrackId)
+ORDER BY Composer DESC
