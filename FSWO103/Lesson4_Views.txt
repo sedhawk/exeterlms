@@ -1,0 +1,42 @@
+--P1E1
+--Create a view named "ArtistsAlbums" that shows all artists Name, 
+--Album Title and ArtistId, even if the value is Null. 
+--Only run this query for artists that have an id less than 100. 
+--Once that is complete, select and view your newly created VIEW.
+
+CREATE VIEW [ArtistsAlbums] AS
+SELECT Name, Title, artists.ArtistId 
+FROM artists
+INNER JOIN albums
+WHERE artists.ArtistId < 100;
+
+select * from [ArtistsAlbums];
+
+--P1E2
+--Update the view you created in the last exercise to also 
+--include the AlbumId column. Once you have done that, run a 
+--query to see your updated view.
+
+drop view [ArtistsAlbums];
+
+CREATE VIEW [ArtistsAlbums] AS
+SELECT Name, Title, artists.ArtistId, AlbumId 
+FROM artists
+INNER JOIN albums
+WHERE artists.ArtistId < 100;
+
+select * from [ArtistsAlbums];
+
+--Final Lesson
+
+CREATE TABLE ProductList (
+ProductID INTEGER PRIMARY KEY AUTOINCREMENT,
+ProductName VARCHAR(50) NOT NULL,
+Price VARCHAR(50) NOT NULL,
+DateAdded date DEFAULT (datetime('now','localtime')),
+EmployeeSupportId INTEGER NOT NULL)
+
+INSERT INTO ProductList (ProductName, Price, EmployeeSupportId)
+values ("Toy Car", 3.50, 2);
+
+select * from ProductList

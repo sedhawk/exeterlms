@@ -1,0 +1,71 @@
+--P1E1
+--Write a query that Inserts a new employee into the database. 
+--However, you only have the following information on the new employee: 
+--First and Last Name, Birthday, Hire Date, City, State, Country, 
+--Phone Number, and Email. Once you have done that, write a query to 
+--view all information for only that employee.
+
+INSERT INTO employees (LastName, FirstName, BirthDate, HireDate, City, State, Country, Phone, Email)
+VALUES ("Speer", "Don", 2001-04-01, 2018-03-20, "Phoenix", "AZ", "USA", 555-555-5555, "don@chinookcorp.com");
+
+SELECT * FROM employees
+WHERE LastName = "Speer";
+
+--P1E2
+--Write a query to Update the employee that you just inserted. 
+--Give your new employee a Title of "Floor Manager" and your employee 
+--now reports to an employee with an id of 2. When you have completed 
+--that query, run another query to see your updated employee.
+
+UPDATE employees
+SET Title = "Floor Manager", ReportsTo = 2
+WHERE LastName = "Speer";
+
+SELECT * FROM employees
+WHERE LastName = "Speer";
+
+--P2E1
+--Write a query that finds all tracks that do not have a value specified for Composers.
+
+SELECT * FROM tracks
+WHERE Composer IS NULL;
+
+--P2E2
+--Write a query that finds all customer's information that have a 
+--value for the State they live in and the Company they work for.
+
+SELECT State, Company FROM customers
+WHERE State IS NOT NULL AND Company IS NOT NULL;
+
+--P2E3
+--Write a query that finds all customer's information that have a 
+--Null value for the State they live in and the Company they work for. 
+--If you notice, all customers with a Null value in the State column are 
+--from either Europe, Asia or South America. Update their State to be 
+--either "Europe", "Asia" or "South America" depending on where their 
+--country is. Lastly, write a query that will allow you to view the 
+--updated customers with a state of "Europe", "Asia" or "South America".
+
+SELECT * FROM customers
+WHERE State IS NULL AND Company IS NULL;
+
+UPDATE customers
+SET State = Country
+WHERE State IS NULL;
+
+SELECT * FROM customers
+WHERE Country != "USA";
+
+--Scenario
+
+DELETE FROM customers
+WHERE Country = "United Kingdom";
+
+INSERT INTO customers (FirstName, LastName, City, Email)
+VALUES ("Samantha", "Joe", "Moscow", "samantha@jetbrains.com"),
+("Jonathan", "Spewart", "Moscow", "johnathan@jetbrains.com"),
+("Steven", "Combhair", "Moscow", "steven@jetbrains.com");
+
+UPDATE customers
+SET SupportRepId = 6
+WHERE Country = "Russia";
