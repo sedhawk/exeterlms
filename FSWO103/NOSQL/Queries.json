@@ -1,0 +1,16 @@
+{
+    "_comment1": "Find all movies that are longer than 2 hours",
+    "_query1": "db.movies.find( { lengthInMin: { $gt : 120} } )",
+    "_comment2": "Find all movies that do not have Tom Hanks as a lead actor",
+    "_query2": "db.movies.find( {director: { $ne: "Tom Hanks" } } )",
+    "_comment3": "Find all movies that were directed by Christopher Nolan",
+    "_query3": "db.movies.find( {director: "Christopher Nolan"} )",
+    "_comment4": "Find all movies that are not considered Drama",
+    "_query4": "db.movies.find( {genre: {$exists: false, $nin: [ "Drama" ]} })",
+    "_comment5": "Find all movies that are longer than 90 minutes but less than 2 hours",
+    "_query5": "db.movies.find({{ $and: [ { lengthInMin: { $gt: 90 } }, { lengthInMin: { $lt: 120 } } ] })",
+    "_comment6": "Find all movies that are considered Action or Adventure and return only the title of the movie",
+    "_query6": "",
+    "_comment7": "Sally has very poor eyesight so cannot watch any foreign films. Robert absolutely hates Jodie Foster and refuses to watch any movies with her in it. Stewart has somewhere to be after movie night so can't watch a movie longer than 2 hours.",
+    "_query7": ""
+}
