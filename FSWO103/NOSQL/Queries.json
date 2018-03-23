@@ -8,9 +8,9 @@
     "_comment4": "Find all movies that are not considered Drama",
     "_query4": "db.movies.find( {genre: {$exists: false, $nin: [ "Drama" ]} })",
     "_comment5": "Find all movies that are longer than 90 minutes but less than 2 hours",
-    "_query5": "db.movies.find({{ $and: [ { lengthInMin: { $gt: 90 } }, { lengthInMin: { $lt: 120 } } ] })",
+    "_query5": "db.movies.find({ $and: [ { lengthInMin: { $gt: 90 } }, { lengthInMin: { $lt: 120 } } ] })",
     "_comment6": "Find all movies that are considered Action or Adventure and return only the title of the movie",
-    "_query6": "",
+    "_query6": "db.movies.find({$or:[{ genre : "Action" }, { genre : "Adventure" }]}, {title: 1})",
     "_comment7": "Sally has very poor eyesight so cannot watch any foreign films. Robert absolutely hates Jodie Foster and refuses to watch any movies with her in it. Stewart has somewhere to be after movie night so can't watch a movie longer than 2 hours.",
     "_query7": ""
 }
