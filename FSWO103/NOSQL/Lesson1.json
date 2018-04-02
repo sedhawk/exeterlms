@@ -1,7 +1,0 @@
-db.cars.insertMany([{make: "Chevy", model: "Volt", color: "velvet", year: 2018, fourDoor: true, fourWheelDrive: false},
-    {make: "Ford", model: "Ranger", color: "white", year: 1999, fourDoor: false, fourWheelDrive: true},
-    {make: "Toyota", model: "Tacoma", color: "white", year: 2018, fourDoor: true, fourWheelDrive: true},
-    {make: "Tesla", model: "Roadster", color: "smokey grey", year: 2018, fourDoor: false, fourWheelDrive: false},
-    {make: "Toyota", model: "4-Runner", color: "white", year: 2020, fourDoor: true, fourWheelDrive: true}])
-
-db.cars.find({})
