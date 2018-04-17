@@ -1,25 +1,14 @@
 function getGrades (){
 
-    let grade = parseInt(document.getElementById('enterGrade').value);
-    var firstName = document.getElementById('firstname').value;
-    var lastName = document.getElementById('lastname').value;
+    let n = parseInt(document.getElementById("enterGrade").value);
+    let grade = "";
 
-    let postFullName = firstName + " " + lastName;
-    document.getElementById("postFullName").innerHTML = postFullName;
+    if (n >= 90) grade = "A";
+    else if (n >= 80) grade = "B";
+    else if (n >= 70) grade = "C";
+    else if (n >= 70) grade = "D";
+    else grade = "F";
 
-    document.getElementById("postAddress").innerHTML = postAddress;
+    document.getElementById("printGrade").innerHTML = "Your letter grade is an: " + grade;
 
-    var phoneNumber = document.getElementById('phonenumber').value;
-
-    let gradeArray = [];
-
-    for(var i=0; i<=gradeArray.length; i++){
-      
-      var postAge = "Age: " + age;
-      if(numberArray[i] <= 100) document.getElementById('postAge').innerHTML = postAge;
-
-      var postPhoneNumber = "Phone Number: (" + phoneNumber.substring(0,3) + ")" + phoneNumber.substring(3,6) + "-" + phoneNumber.substring(6,10);
-      if(numberArray[i] > 100) document.getElementById('postPhoneNumber').innerHTML = postPhoneNumber;
-
-    }
   }

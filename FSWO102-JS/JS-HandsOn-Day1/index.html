@@ -9,12 +9,13 @@
       <h1 id="text-center">Academic Grading System!</h1>
       <form id="text-center" action="">
 
-        Enter Grade:<br> <input type="number" id="enterGrade" min="0" max="100"/><br>
+        Enter Grade:<br> <input type="number" id="enterGrade" min="0" max="10000"/><br>
 
-        <input id="round-corner" type="button" onclick="getGrades()"/>
+        <input id="round-corner" type="button" onclick="getGrades()" value="Calculate Grade!"/>
       </form>
       <div>
-         <p id="postFullName"></p>
+        <h3 id="text-center"><span id="printGrade"></span></h3>
+
       </div>
 
     <script src="script.js"></script>
