@@ -7,7 +7,7 @@ function bingBong (){
       else if (i % 5 == 0) result = "Bong"
       else if (i%3 == 0 && i%5 == 0) result = "Bing Bong";
       else result = i;
-      document.getElementById("output").innerHTML += result + '\n';
+      document.getElementById("output").innerHTML += result + ' \n';
       i++;
     }
   }
