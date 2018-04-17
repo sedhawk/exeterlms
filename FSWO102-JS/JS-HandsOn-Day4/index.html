@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+       <link rel="stylesheet" href="style.css">
+       <title></title>
+   </head>
+   <body>
+      <h1 id="text-center">Optimized Fibonacci Sequence Generator!</h1>
+      <form id="text-center">
+
+        Enter Number: <input type="number" id="seq" min="0" max="10000"/><br>
+        <input type="button" onclick=runTest() value="Run Fibonacci Test!"></input>
+
+      </form>
+      <div>
+        <h3>Iterative time in milliseconds: <span id="iterative"></span></h3>
+        <h3>Memoization time in milliseconds: <span id="memoization"></span></h3>
+        <h3>Bottoms-up time in milliseconds: <span id="bottoms_up"></span></h3>
+      </div>
+
+    <script src="script.js"></script>
+   </body>
+</html>
