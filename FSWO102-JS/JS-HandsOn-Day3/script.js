@@ -32,7 +32,7 @@ class Grandparents {
     return this._vertical;
   }
   vertical(){
-    return console.log("Grandpa can jump " + this._vertical + " inches");
+    console.log("Grandpa can jump " + this._vertical + " inches");
   }
 }
 
