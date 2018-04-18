@@ -25,16 +25,15 @@ class Grandparents {
   get eyeColor(){
     return this._eyeColor;
   }
-  vertical = () =>{
-    set vertical(jump){
-      this._vertical = jump;
-    }
-    get vertical(){
-      return this._vertical;
-    }
+  set vertical(jump){
+    this._vertical = jump;
+  }
+  get vertical(){
+    return this._vertical;
   }
 }
 
-let grandpa = new Grandparents();
-grandpa.vertical = 22;
-console.log(grandpa.vertical);
+let verticalJump = new Grandparents();
+    verticalJump.vertical = 22;
+
+console.log(verticalJump.vertical);
