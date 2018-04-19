@@ -37,6 +37,5 @@ class Grandparents {
 }
 
 let grandpa = new Grandparents();
-    grandpa.vertical = 22;
 
-console.log(grandpa.vertical);
+grandpa.vertical();
