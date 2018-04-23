@@ -1,0 +1,4 @@
+*~
+config/keys.js
+node_modules/
+Chinook_Sqlite_AutoIncrementPKs.sqlite
