@@ -10,15 +10,15 @@ app.get('/', (request, response) => {
     response.render('beginning');
 });
 
-app.get('middle', (request, response) => {
+app.get('/middle', (request, response) => {
     response.render('middle');
 });
 
-app.get('end', (request, response) => {
+app.get('/end', (request, response) => {
     response.render('end');
 });
 
-app.get('final', (request, response) => {
+app.get('/final', (request, response) => {
     response.render('final');
 });
 
