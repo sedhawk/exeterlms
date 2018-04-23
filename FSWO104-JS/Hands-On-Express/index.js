@@ -22,6 +22,10 @@ app.get('/final', (request, response) => {
     response.render('final');
 });
 
+app.get('/beginning', (request, response) => {
+    response.render('beginning');
+});
+
 app.use((request, response) => {
     response.status(404);
     response.render('404');
