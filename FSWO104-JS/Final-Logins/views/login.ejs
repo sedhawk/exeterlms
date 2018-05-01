@@ -47,21 +47,46 @@
   </head>
   <body>
     <nav>
-            <ul>
-              <% if (user) { %>
-              <li><a href="/auth/logout">Logout</a></li>
-              <% } else { %>
-              <li><a href="/auth/login">Login</a></li>
-              <% } %>
-              <li><a href="/">Homepage</a></li>
-              <li><a href="/profile">Profile</a></li>
-            </ul>
-        </nav>
+          <ul>
+            <% if (user) { %>
+            <li><a href="/auth/logout">Logout</a></li>
+            <% } else { %>
+            <li><a href="/auth/login">Login</a></li>
+            <% } %>
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/profile">Profile</a></li>
+          </ul>
+      </nav>
         <header>
             <h1>Login using...</h1>
         </header>
         <main>
             <a class="google-btn" href="/auth/google">Google+</a>
         </main>
+        <header>
+            <h1>Or Login using...</h1>
+        </header>
+        <div>
+            <form action="/profile" method="POST">
+                <div>
+                    <label for="firstName">First Name: </label>
+                    <input type= "text" name="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Last Name: </label>
+                    <input type= "text" name="lastName">
+                </div>
+                <div>
+                    <label for="username">Username: </label>
+                    <input type= "text" name="username">
+                </div>
+                <div>
+                    <label for="password">Password: </label>
+                    <input type= "text" name="password">
+                </div>
+                <div>
+                    <input type="button" value="Submit">
+                </div>
+        </div>
   </body>
 </html>
