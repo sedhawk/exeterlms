@@ -1,0 +1,33 @@
+{
+  "name": "postr",
+  "description": "vulnerable node application",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "ejs": "^1.0.0",
+    "express": "^3.21.2",
+    "fs": "0.0.1-security",
+    "helmet": "^3.12.0",
+    "http": "0.0.0",
+    "jake": "^8.0.16",
+    "lodash": "^4.17.10",
+    "mysql": "^2.3.2",
+    "node-gyp": "^3.6.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "password": "^0.1.1",
+    "path": "^0.12.7",
+    "routes": "^2.1.0",
+    "sequelize": "^1.7.11"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
+}

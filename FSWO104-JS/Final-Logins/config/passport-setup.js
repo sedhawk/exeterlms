@@ -1,17 +1,24 @@
 const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require('./keys');
 const User = require('../models/user-model');
+const db = require('../models');
 
+
+// Serialize sessions
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
 
+
+// Deserialize Session
 passport.deserializeUser((id, done) => {
     User.findById(id).then((user) => {
         done(null, user);
     });
 });
+
 
 passport.use(
     new GoogleStrategy({
@@ -40,3 +47,14 @@ passport.use(
         });
     })
 );
+
+
+// For authentication purposes, do not use in production
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    db.User.find({where: {username: username}}).success(function (user){
+		passwd = user ? user.password : ''
+	    isMatch = db.User.validPassword(password, passwd, done, user)
+	});
+   }
+));
